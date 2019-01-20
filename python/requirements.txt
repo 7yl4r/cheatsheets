@@ -1,0 +1,5 @@
+-- Example PYPI reqs:
+networkx
+parse>=1.8.2
+apache-airflow>=1.10.0
+apache-airflow[mysql]>=1.10.0
