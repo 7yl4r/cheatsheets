@@ -2,9 +2,25 @@
 snippets you might copy & paste often
 
 ```python
+# format strings
+# docs: https://docs.python.org/3/library/string.html#format-specification-mini-language
+"""
+format_spec     ::=  [[fill]align][sign][#][0][width][grouping_option][.precision][type]
+fill            ::=  <any character>
+align           ::=  "<" | ">" | "=" | "^"
+sign            ::=  "+" | "-" | " "
+width           ::=  digit+
+grouping_option ::=  "_" | ","
+precision       ::=  digit+
+type            ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" | "o" | "s" | "x" | "X" | "%"
+"""
+'{:05.2f}'.format(3.1415)  # 03.14
+'{:+1.0E}'.format(3.1415)  # +3E+00
+# more examples @ pyformat.info
+
+
 # breakpoints 
-import pdb
-pdb.set_trace()
+import pdb; pdb.set_trace()
 
 # logging
 import logging, sys
