@@ -43,6 +43,9 @@ general reference links
 * [regex cheatsheet](https://www.debuggex.com/cheatsheet/regex/python) & [debugger](https://www.debuggex.com/?flavor=python)
 * [python format string reference](https://pyformat.info/)
 
+### File i/o
+* [xml via xml.etree.elementtree](https://docs.python.org/2/library/xml.etree.elementtree.html)
+
 ## reading
 longer-form reading material:
 
