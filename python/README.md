@@ -33,6 +33,11 @@ logger.info('lower')    # -vv & above
 logger.warn('middle')   # -v & above
 logger.error('higher')
 logger.critical('highest')
+
+# pretty print 
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
+pp.pprint([[1,2,3],['a','b','c']])
 ```
 
 ## reference
