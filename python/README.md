@@ -34,6 +34,10 @@ logger.warn('middle')   # -v & above
 logger.error('higher')
 logger.critical('highest')
 
+# ISO8601 strftime strings (b/c wtf datetime.isoformat()?)
+ISO_8601_FMT = "%Y-%m-%dT%H:%M:%S.%f"
+ISO_8601_SPACEY_FMT = ISO_8601_FMT.replace("T", " ")
+
 # pretty print 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
