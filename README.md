@@ -14,3 +14,14 @@ Basic usage is usually `-azvh`:
 ```
 
 Options for directory merging: `rsync -habviuzP $OLDLOC/ $NEWLOC`. This keeps the most-recently modified version of the file.
+
+
+## accounts
+```
+groupadd -g 4747 grpname
+
+useradd -d /home/ty -u 4747 -g 4747 -G sudo,admin,common -e 2999-12-30 ty
+useradd -M nohomeuser
+
+usermod -a G grpname username
+```
