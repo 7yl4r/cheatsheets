@@ -25,3 +25,9 @@ useradd -M nohomeuser
 
 usermod -a G grpname username
 ```
+
+## permissions
+```
+# set group permissions same as user
+chmod -R g=u /location
+```
