@@ -31,3 +31,11 @@ usermod -a G grpname username
 # set group permissions same as user
 chmod -R g=u /location
 ```
+
+## clipboard-to-files
+```
+# see possible targets
+xclip -selection clipboard -t TARGETS -o
+# example to create image from clipboard
+xclip -selection clipboard -t image/png -o > /tmp/myimage.png
+```
