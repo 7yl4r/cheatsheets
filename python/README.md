@@ -42,6 +42,10 @@ ISO_8601_SPACEY_FMT = ISO_8601_FMT.replace("T", " ")
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint([[1,2,3],['a','b','c']])
+
+# regex
+import re
+re.compile(".*").match("my_string")
 ```
 
 ## reference
