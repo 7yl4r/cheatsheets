@@ -17,7 +17,7 @@ Options for directory merging: `rsync -habviuzP $OLDLOC/ $NEWLOC`. This keeps th
 
 
 ## accounts
-```
+```bash
 groupadd -g 4747 grpname
 
 useradd -d /home/ty -u 4747 -g 4747 -G sudo,admin,common -e 2999-12-30 ty
@@ -27,15 +27,26 @@ usermod -a G grpname username
 ```
 
 ## permissions
-```
+```bash
 # set group permissions same as user
 chmod -R g=u /location
 ```
 
 ## clipboard-to-files
-```
+```bash
 # see possible targets
 xclip -selection clipboard -t TARGETS -o
 # example to create image from clipboard
 xclip -selection clipboard -t image/png -o > /tmp/myimage.png
+```
+
+## find
+```bash
+# exec
+find . -exec grep chrome {} \;
+# exec w/ pipe
+find /path/to/jpgs -type f -exec sh -c 'jhead -v {} | grep 123' \;
+# w/ xargs & command substitution
+find ./content -type f -name 'DESCRIPTION' -print0 | \
+    xargs -0 Rscript -e "devtools::install( \"$(sed -r 's|/[^/]+$||')\")"
 ```
