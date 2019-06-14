@@ -50,3 +50,18 @@ find /path/to/jpgs -type f -exec sh -c 'jhead -v {} | grep 123' \;
 find ./content -type f -name 'DESCRIPTION' -print0 | \
     xargs -0 Rscript -e "devtools::install( \"$(sed -r 's|/[^/]+$||')\")"
 ```
+
+## Space-saving Tips
+```
+# inspect the size of files in a directory
+du -sh ./my_directory/*
+
+# search for big files (example shows >5G)
+find ./ -type f -size +5G
+
+# search for unused files (example unaccessed for >90 days)
+find ./ -type f -atime +90
+
+# find content-identical files of size >10MB
+jdupes -r -S -X size-:10M ./my_dir/
+```
