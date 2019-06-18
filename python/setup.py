@@ -4,7 +4,7 @@
 from setuptools import setup
 import io
 
-VERSION = '0.0.1' # should match __version__ in PROJECT_NAME.__init__.py
+VERSION = '0.0.1'  # should match __version__ in PROJECT_NAME.__init__.py
 
 
 # === long_description comes from README.md
@@ -18,7 +18,7 @@ def read(*filenames, **kwargs):
             buf.append(f.read())
     return sep.join(buf)
 
-long_description = read('README.md') #, 'CHANGES.txt')
+long_description = read('README.md')  # , 'CHANGELOG.md')
 
 # === installation requirements read from requirements files
 # so these two commands are equivalent:
@@ -52,10 +52,10 @@ setup(
         'projectname', 
         'OtherProjectProvidedPackage2'
     ],
+    author_email='code+projectname@tylar.info',
     
     # === no edits needed past here
     author='Tylar Murray',
-    author_email='code+projectname@tylar.info',
     version=VERSION,
     long_description=long_description,
     install_requires=_install_requires,
