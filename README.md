@@ -15,6 +15,30 @@ Basic usage is usually `-azvh`:
 
 Options for directory merging: `rsync -habviuzP $OLDLOC/ $NEWLOC`. This keeps the most-recently modified version of the file.
 
+## disks
+```
+# view disk config
+lsblk -o NAME,SIZE,FSTYPE,TYPE,MOUNTPOINT
+```
+
+### partition + format
+```
+# === partition
+gdisk /dev/$DISK
+# p : show partitions 
+# n : new
+#    p : primary
+# w : write and exit
+
+# === fs setup
+/sbin/mkfs.ext4 /dev/$DISK  # create file system on new partition
+mount /dev/$DISK /loc/to/mount/to`  # temp test mount
+vi /etc/fstab  
+# && and add a line like:
+# /dev/$DISK  /loc/to/mount/to   ext4    defaults    0   0`
+```
+
+* [fstab info](https://help.ubuntu.com/community/Fstab)
 
 ## accounts
 ```bash
