@@ -1,5 +1,5 @@
 
 ```bash
 # submodule initialize
-git submodule update --remote --recursive
+git submodule update --init --recursive
 ```
