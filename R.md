@@ -27,3 +27,13 @@ Rscript -e 'if (!requireNamespace("devtools")) install.packages("devtools")'
 # devtools on DESCRIPTION
 Rscript -e 'devtools::install(pkg=".", quick=TRUE, quiet=TRUE, upgrade=TRUE)'
 ```
+
+Install latest R (ubuntu) ([ref](https://askubuntu.com/a/436491/87936))
+```bash
+sudo add-apt-repository "deb http://cran.rstudio.com/bin/linux/ubuntu $(lsb_release -sc)-cran35/"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository ppa:marutter/rdev
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install r-base
+```
