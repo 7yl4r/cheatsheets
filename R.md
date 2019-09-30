@@ -19,3 +19,11 @@ glue("{var1}_{var2}.rds")  # foo_bar.rds
 gsub("\ ", "_", "hello world ")  # hello_world_
 ```
 
+Install dependencies from DESCRIPTION file:
+
+```bash
+# manual install devtools
+Rscript -e 'if (!requireNamespace("devtools")) install.packages("devtools")'
+# devtools on DESCRIPTION
+Rscript -e 'devtools::install(pkg=".", quick=TRUE, quiet=TRUE, upgrade=TRUE)'
+```
