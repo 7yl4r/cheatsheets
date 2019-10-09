@@ -1,5 +1,6 @@
 ```yaml
-# === yaml DRY anchors in docker 
+# === yaml DRY anchors in docker
+# [ref]( https://medium.com/@kinghuang/docker-compose-anchors-aliases-extensions-a1e4105d70bd )
 - &flag Apple
 - Beachball
 - Cartoon
