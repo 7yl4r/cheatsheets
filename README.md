@@ -89,3 +89,9 @@ find ./ -type f -atime +90
 # find content-identical files of size >10MB
 jdupes -r -S -X size-:10M ./my_dir/
 ```
+
+## FTP
+```
+lftp -c mirror ftp://ftp.nodc.noaa.gov/nodc/archive/arc0139/0190272/1.1/data/0-data/Sargassum_areal_coverage/
+lftp 7yl4r@userftp.pgc.umn.edu:/3864_2019jul29> mirror --use-pget-n=4 .
+```
