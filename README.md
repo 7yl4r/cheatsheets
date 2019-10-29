@@ -4,6 +4,13 @@
 * `.xz` compress: `tar -cvJf file.tar.xz files/`
 * `.xz` extract: `tar -xvf file.tar.xz`
 
+### tar flag summary:
+* `-x` extract
+* `-v` verbose
+* `-f` filename
+* `-c` compress
+* `-J` xz
+
 ## rsync
 Basic usage is usually `-azvh`:
 ```
