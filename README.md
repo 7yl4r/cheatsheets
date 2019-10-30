@@ -102,3 +102,8 @@ jdupes -r -S -X size-:10M ./my_dir/
 lftp -c mirror ftp://ftp.nodc.noaa.gov/nodc/archive/arc0139/0190272/1.1/data/0-data/Sargassum_areal_coverage/
 lftp 7yl4r@userftp.pgc.umn.edu:/3864_2019jul29> mirror --use-pget-n=4 .
 ```
+
+# vi
+```
+# delete all lines with given ending:
+:g/_the_ending\.txt$/d
