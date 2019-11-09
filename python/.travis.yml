@@ -1,0 +1,18 @@
+# example basic boilerplate for using Travis CI with python
+
+language: python
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "nightly"
+install:
+    - pip install -r requirements.txt
+before_script:
+    - pip install -r requirements_tests.txt
+script:
+    # execute all tests not marked with "testdata_required"
+    - pytest -v -m "not testdata_required"
