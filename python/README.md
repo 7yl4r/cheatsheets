@@ -57,6 +57,7 @@ general reference links
 * [python format string reference](https://pyformat.info/)
 
 ### File i/o
+* [ensure dir exists](https://stackoverflow.com/questions/2793789/create-destination-path-for-shutil-copy-files/49615070#49615070): `os.makedirs(os.path.dirname(dest_fpath), exist_ok=True)`
 * [xml via xml.etree.elementtree](https://docs.python.org/2/library/xml.etree.elementtree.html)
 
 ## reading
