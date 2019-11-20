@@ -46,6 +46,10 @@ pp.pprint([[1,2,3],['a','b','c']])
 # regex
 import re
 re.compile(".*").match("my_string")
+
+# system calls & subprocesses
+import subprocess
+subprocess.run(['ls', '-lah', '~/'])
 ```
 
 ## reference
