@@ -4,6 +4,4 @@ parse>=1.8.2
 apache-airflow>=1.10.0
 apache-airflow[mysql]>=1.10.0
 -- install from github using
--- -e git://github.com/mozilla/elasticutils.git#egg=elasticutils
--- alternative github syntax?
-foo @ git+https://github.com/foo-organization/foo@dev#egg=foo-9999
+filepanther @ git+https://github.com/7yl4r/filepanther@master#egg=filepanther
