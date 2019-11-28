@@ -63,16 +63,23 @@ general reference links
 ### File i/o
 * [ensure dir exists](https://stackoverflow.com/questions/2793789/create-destination-path-for-shutil-copy-files/49615070#49615070): `os.makedirs(os.path.dirname(dest_fpath), exist_ok=True)`
 * [xml via xml.etree.elementtree](https://docs.python.org/2/library/xml.etree.elementtree.html)
+* csv, tsv file handling via pandas read_csv & write_csv
 
 ```python
-# file paths, extensions, basenames, dirs
+# === file paths, extensions, basenames, dirs
 import os.path
-
 abs_path = os.path.abspath("./file.txt")  # /abs/path/file.txt
 fbase = os.path.basename("./file.txt")  # file
 path_str = os.path.join("dir", "subdir", "file.txt")  # dir/subdir/file.txt
 basepath, ext = os.path.splitext("./file.txt")  # ./file, .txt
 dirpath, fname = os.path.split("./dir/subdir/file.txt")  # ./dir/subdir/, file.txt
+
+# === raw text handling
+with open(filepath, "r") as f_obj:
+    for line in f_obj:
+        print(line)
+        
+# TODO: add seek, write example(s)
 ```
 
 ## reading
