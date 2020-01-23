@@ -9,6 +9,7 @@ https://docs.python.org/3/library/unittest.html#assert-methods
 from unittest import TestCase
 from unittest.mock import patch
 from unittest.mock import MagicMock
+import pytest
 
 # tested module(s):
 from ExampleClass import ExampleClass
@@ -18,6 +19,7 @@ class Test_ExampleClass_main(TestCase):
 
     # tests:
     #########################
+    @pytest.mark.webtest  # mark this test as "webtest"
     @patch('os.stat')  # patch to collect info instead of actually calling
     def test_calls_my_method(self, mock_os_stat):
         """ ExampleClass module calls my_method twice """
