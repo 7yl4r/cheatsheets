@@ -54,7 +54,7 @@ groupadd -g 4747 grpname
 useradd -d /home/ty -u 4747 -g 4747 -G sudo,admin,common -e 2999-12-30 ty
 useradd -M nohomeuser
 
-usermod -a G grpname username
+usermod -a -G grpname username
 ```
 
 ## permissions
