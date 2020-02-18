@@ -54,7 +54,11 @@ groupadd -g 4747 grpname
 useradd -d /home/ty -u 4747 -g 4747 -G sudo,admin,common -e 2999-12-30 ty
 useradd -M nohomeuser
 
+# add user to a group
 usermod -a -G grpname username
+
+# delete user
+userdel username
 ```
 
 ## permissions
