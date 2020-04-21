@@ -22,6 +22,12 @@ Basic usage is usually `-azvh`:
 
 Options for directory merging: `rsync -habviuzP $OLDLOC/ $NEWLOC`. This keeps the most-recently modified version of the file.
 
+## ssh
+```
+# install ssh key on remote
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@server1.marine.usf.edu
+```
+
 ## disks
 ```
 # view disk config
