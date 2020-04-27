@@ -74,12 +74,15 @@ path_str = os.path.join("dir", "subdir", "file.txt")  # dir/subdir/file.txt
 basepath, ext = os.path.splitext("./file.txt")  # ./file, .txt
 dirpath, fname = os.path.split("./dir/subdir/file.txt")  # ./dir/subdir/, file.txt
 
-# === raw text handling
+# === read raw text
 with open(filepath, "r") as f_obj:
     for line in f_obj:
         print(line)
+# === write raw text (append)
+with open('action.csv', 'a') as f_obj:
+    print('helloWorld', file=f_obj)
         
-# TODO: add seek, write example(s)
+# TODO: add seek example(s)
 ```
 
 ## reading
