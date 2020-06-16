@@ -73,7 +73,7 @@ userdel username
 chmod -R g=u /location
 
 # show permissions of full directory tree
-namei -m /home/user/dir/child/file
+namei -mo /home/user/dir/child/file
 ```
 
 ## clipboard-to-files
