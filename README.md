@@ -71,6 +71,9 @@ userdel username
 ```bash
 # set group permissions same as user
 chmod -R g=u /location
+
+# show permissions of full directory tree
+namei -m /home/user/dir/child/file
 ```
 
 ## clipboard-to-files
