@@ -19,7 +19,7 @@ glue("{var1}_{var2}.rds")  # foo_bar.rds
 gsub("\ ", "_", "hello world ")  # hello_world_
 ```
 
-Install dependencies from DESCRIPTION file:
+# Install dependencies from DESCRIPTION file:
 
 ```bash
 # manual install devtools
@@ -28,7 +28,20 @@ Rscript -e 'if (!requireNamespace("devtools")) install.packages("devtools")'
 Rscript -e 'devtools::install(pkg=".", quick=TRUE, quiet=TRUE, upgrade=TRUE)'
 ```
 
-Install latest R (ubuntu) ([ref](https://askubuntu.com/a/436491/87936))
+# File i/o
+## excel
+```R
+library(readxl)
+dat <- read_excel('location/of/excel/file.xlsx')
+```
+
+## .csv
+```R
+library(tidyverse)
+statloc <- read_csv('data/statloc.csv')
+```
+
+# Install latest R (ubuntu) ([ref](https://askubuntu.com/a/436491/87936))
 ```bash
 sudo add-apt-repository "deb http://cran.rstudio.com/bin/linux/ubuntu $(lsb_release -sc)-cran35/"
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
