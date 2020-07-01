@@ -83,6 +83,13 @@ with open('action.csv', 'a') as f_obj:
     print('helloWorld', file=f_obj)
         
 # TODO: add seek example(s)
+
+# === temporary (tmp) files
+import tempfile
+print tempfile.gettempdir() # prints the current temporary directory
+
+with tempfile.TemporaryFile() as tmpfile:
+    tmpfile.write('something on temporaryfile')
 ```
 
 ## reading
