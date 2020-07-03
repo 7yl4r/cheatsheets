@@ -116,7 +116,14 @@ lftp -c mirror ftp://ftp.nodc.noaa.gov/nodc/archive/arc0139/0190272/1.1/data/0-d
 lftp 7yl4r@userftp.pgc.umn.edu:/3864_2019jul29> mirror --use-pget-n=4 .
 ```
 
-# vi
+# Text Editing
+```
+# find & replace text
+sed 's/word1/word2/g' input.file
+```
+
+## vi
 ```
 # delete all lines with given ending:
 :g/_the_ending\.txt$/d
+```
