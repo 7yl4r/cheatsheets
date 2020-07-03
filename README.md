@@ -119,7 +119,7 @@ lftp 7yl4r@userftp.pgc.umn.edu:/3864_2019jul29> mirror --use-pget-n=4 .
 # Text Editing
 ```
 # find & replace text
-sed 's/word1/word2/g' input.file
+sed 's/word1/word2/g' input.file > output.file
 ```
 
 ## vi
