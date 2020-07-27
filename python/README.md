@@ -69,9 +69,9 @@ general reference links
 # === file paths, extensions, basenames, dirs
 import os.path
 abs_path = os.path.abspath("./file.txt")  # /abs/path/file.txt
-fbase = os.path.basename("./file.txt")  # file
+fbase = os.path.basename("./test/file.txt")  # file.txt
 path_str = os.path.join("dir", "subdir", "file.txt")  # dir/subdir/file.txt
-basepath, ext = os.path.splitext("./file.txt")  # ./file, .txt
+basepath, ext = os.path.splitext("./test/file.txt")  # ./test/file, .txt
 dirpath, fname = os.path.split("./dir/subdir/file.txt")  # ./dir/subdir/, file.txt
 
 # === read raw text
