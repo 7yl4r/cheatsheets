@@ -1,3 +1,6 @@
+# Links
+* [data viz catalogue](https://datavizcatalogue.com/)
+
 # *nix
 ## archives
 ### high-compression (xz)
