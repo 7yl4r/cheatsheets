@@ -1,6 +1,11 @@
 ## snippets
 snippets you might copy & paste often
 
+```bash
+# run tests without a "real_db" mark:
+python -m pytest -m "not real_db"
+```
+
 ```python
 # format strings
 # docs: https://docs.python.org/3/library/string.html#format-specification-mini-language
