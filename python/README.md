@@ -23,7 +23,6 @@ type            ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" |
 '{:+1.0E}'.format(3.1415)  # +3E+00
 # more examples @ pyformat.info
 
-
 # breakpoints 
 import pdb; pdb.set_trace()
 
@@ -55,6 +54,18 @@ re.compile(".*").match("my_string")
 # system calls & subprocesses
 import subprocess
 subprocess.run(['ls', '-lah', '~/'])
+
+# add info to a caught exception
+try:
+    # yada yada...
+except Exception as er:
+    import sys
+    raise (
+        type(er), type(er)(
+            e.message +
+            '\n ADD YOUR INFO HERE'
+        ), sys.exc_info()[2]
+    )
 ```
 
 ## reference
