@@ -9,6 +9,7 @@ python -m pytest -m "not real_db"
 ```python
 # format strings
 # docs: https://docs.python.org/3/library/string.html#format-specification-mini-language
+# format type table: https://docs.python.org/2.4/lib/typesseq-strings.html
 """
 format_spec     ::=  [[fill]align][sign][#][0][width][grouping_option][.precision][type]
 fill            ::=  <any character>
