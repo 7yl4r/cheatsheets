@@ -80,8 +80,8 @@ general reference links
 ### File i/o
 * [ensure dir exists](https://stackoverflow.com/questions/2793789/create-destination-path-for-shutil-copy-files/49615070#49615070): `os.makedirs(os.path.dirname(dest_fpath), exist_ok=True)`
 * [xml via xml.etree.elementtree](https://docs.python.org/2/library/xml.etree.elementtree.html)
-* csv, tsv file handling via pandas read_csv & write_csv
-
+* csv, tsv file handling via [pandas read_csv & write_csv](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html)
+* excel files via [pandas `read_excel`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)
 ```python
 # === file paths, extensions, basenames, dirs
 import os.path
