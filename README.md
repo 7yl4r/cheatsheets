@@ -2,6 +2,11 @@
 * [data viz catalogue](https://datavizcatalogue.com/)
 
 # *nix
+## piping
+```
+# pipe stderr & stdin to file
+echo texthere &> myfile.txt
+```
 ## archives
 ### high-compression (xz)
 * `.xz` compress: `tar -cvJf file.tar.xz files/`
