@@ -1,4 +1,6 @@
 
+## Submodules 
+
 ```bash
 # initialize (if needed) & update all submodules
 git submodule update --init --recursive --remote
@@ -10,4 +12,14 @@ git submodule add -b master https://github.com/un/repo_name.git src/path/to/modu
 git submodule deinit -f path/to/submodule
 rm -rf .git/modules/path/to/submodule
 git rm -f path/to/submodule
+```
+
+## .gitignore
+Ignore everything inside this folder but keep the folder by adding a `.gitignore` with content :
+
+```
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
 ```
