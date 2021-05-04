@@ -17,6 +17,8 @@ git rm -f path/to/submodule
 ## .gitignore
 Ignore everything inside this folder but keep the folder by adding a `.gitignore` with content :
 
+:warning: you can also do this with a `.gitkeep` file.
+
 ```
 # Ignore everything in this directory
 *
