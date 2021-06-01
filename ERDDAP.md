@@ -24,4 +24,6 @@ docker exec -it erddap bash -c "cd /usr/local/tomcat/webapps/erddap/WEB-INF/ && 
 ```
 # see amount of memory allowed by ERDDAP (for debug OutOfMemoryError)
 docker exec -it erddap cat /usr/local/tomcat/bin/setenv.sh
+# see actual memory being used currently (`-Xms` & `-Xmx` params)
+docker exec -it erddap bash -c "ps ax | grep erddap"
 ```
