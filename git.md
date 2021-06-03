@@ -2,6 +2,9 @@
 ## Submodules 
 
 ```bash
+# git "network" view (A DOG) https://stackoverflow.com/a/35075021/1483986
+git log --all --decorate --oneline --graph
+
 # initialize (if needed) & update all submodules
 git submodule update --init --recursive --remote
 
