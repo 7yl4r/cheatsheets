@@ -1,3 +1,8 @@
+## Log Graph Visual
+```
+# remember: git log "A DOG"
+git log --all --decorate --oneline --graph
+```
 
 ## Submodules 
 
