@@ -135,3 +135,9 @@ sed 's/word1/word2/g' input.file > output.file
 # delete all lines with given ending:
 :g/_the_ending\.txt$/d
 ```
+
+## system info
+```
+# distro info
+cat /etc/*elease
+```
