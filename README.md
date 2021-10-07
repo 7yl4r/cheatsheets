@@ -36,6 +36,27 @@ Options for directory merging: `rsync -habviuzP $OLDLOC/ $NEWLOC`. This keeps th
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@server1.marine.usf.edu
 ```
 
+## networking
+
+
+### test connection to port
+```
+# use telnet
+[root@seashell ~]# telnet 35.211.139.69 7070
+Trying 35.211.139.69...
+Connected to 35.211.139.69.
+Escape character is '^]'.
+^CConnection closed by foreign host.
+
+# use netcat to test tcp
+[root@seashell ~]# nc -z -v 35.211.139.69 7070
+Connection to 35.211.139.69 7070 port [tcp/arcp] succeeded!
+
+# use netcat to test udp
+[root@seashell ~]# nc -z -v -u 35.211.139.69 7070
+Connection to 35.211.139.69 7070 port [udp/arcp] succeeded!
+```
+
 ## disks
 ```
 # view disk config
