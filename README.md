@@ -8,6 +8,9 @@
 echo texthere &> myfile.txt
 ```
 ## archives
+### common `.tar.gz` tarball
+* `tar -xvf archive.tar.gz` : `e`xtract `v`erbose `f`ilename
+
 ### high-compression (xz)
 * `.xz` compress: `tar -cvJf file.tar.xz files/`
 * `.xz` extract: `tar -xvf file.tar.xz`
