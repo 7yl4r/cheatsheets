@@ -107,6 +107,11 @@ print tempfile.gettempdir() # prints the current temporary directory
 
 with tempfile.TemporaryFile() as tmpfile:
     tmpfile.write('something on temporaryfile')
+
+# === read JSON data from file
+import json
+with open('data.txt') as json_file:
+    data = json.load(json_file)
 ```
 
 ## reading
