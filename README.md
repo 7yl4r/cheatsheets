@@ -22,6 +22,12 @@ echo texthere &> myfile.txt
 * `-c` compress
 * `-J` xz
 
+## http downloads
+```
+# download file
+curl http://example.com --output my.file
+```
+
 ## rsync
 Basic usage is usually `-azvh`:
 ```
