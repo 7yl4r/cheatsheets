@@ -1,3 +1,33 @@
+## docstring formatting ref
+```python
+"""Summary line.
+Extended description of function.
+
+Parameters
+----------
+arg1 : int
+    Description of arg1
+arg2 : str
+    Description of arg2
+
+Returns
+-------
+bool
+    Description of return value
+
+See Also
+--------
+otherfunc : some related other function
+
+Examples
+--------
+These are written in doctest format, and should illustrate how to
+use the function.
+>>> a=[1,2,3]
+>>> print [x + 3 for x in a]
+[4, 5, 6]
+"""
+```
 ## snippets
 snippets you might copy & paste often
 
@@ -7,7 +37,22 @@ python -m pytest -m "not real_db"
 ```
 
 ```python
-# format strings
+# === breakpoints 
+import pdb; pdb.set_trace()
+
+# === logging
+import logging, sys 
+logger = logging.getLogger("{}.{}".format(
+    __name__,
+    sys._getframe().f_code.co_name)
+)
+logger.debug('lowest')  # -vvv only
+logger.info('lower')    # -vv & above
+logger.warn('middle')   # -v & above
+logger.error('higher')
+logger.critical('highest')
+
+# === format strings
 # docs: https://docs.python.org/3/library/string.html#format-specification-mini-language
 # format type table: https://docs.python.org/2.4/lib/typesseq-strings.html
 """
@@ -24,39 +69,26 @@ type            ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" |
 '{:+1.0E}'.format(3.1415)  # +3E+00
 # more examples @ pyformat.info
 
-# breakpoints 
-import pdb; pdb.set_trace()
 
-# logging
-import logging, sys
-logger = logging.getLogger("{}.{}".format(
-    __name__,
-    sys._getframe().f_code.co_name)
-)
-logger.debug('lowest')  # -vvv only
-logger.info('lower')    # -vv & above
-logger.warn('middle')   # -v & above
-logger.error('higher')
-logger.critical('highest')
-
-# ISO8601 strftime strings (b/c wtf datetime.isoformat()?)
+# === ISO8601 strftime strings 
+# (b/c wtf datetime.isoformat()?)
 ISO_8601_FMT = "%Y-%m-%dT%H:%M:%S.%f"
 ISO_8601_SPACEY_FMT = ISO_8601_FMT.replace("T", " ")
 
-# pretty print 
+# === pretty print 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint([[1,2,3],['a','b','c']])
 
-# regex
+# === regex
 import re
 re.compile(".*").match("my_string")
 
-# system calls & subprocesses
+# === system calls & subprocesses
 import subprocess
 subprocess.run(['ls', '-lah', '~/'])
 
-# add info to a caught exception
+# === add info to a caught exception
 try:
     # yada yada...
 except Exception as er:
