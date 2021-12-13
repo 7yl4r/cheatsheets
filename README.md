@@ -171,3 +171,13 @@ sed 's/word1/word2/g' input.file > output.file
 # distro info
 cat /etc/*elease
 ```
+
+## one-time setup stuff
+```
+# set my `history` cmd preferences:
+echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bash_profile
+echo 'export HISTCONTROL=ignoreboth:erasedups "' >> ~/.bash_profile
+echo 'export HISTSIZE=100000 "' >> ~/.bash_profile
+echo 'export HISTFILESIZE=10000000 "' >> ~/.bash_profile
+
+```
