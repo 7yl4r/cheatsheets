@@ -1,9 +1,8 @@
-The project README is the entry point for any human looking in a directory.
+The README is the entry point for any human looking in a directory.
 This is the place to put introductory materials and provide general guidance.
 
-This directory contains "boilerplate" files.
-The idea here is to provide a lot of common patterns that can be copy-pasted into a new project.
-A few notes that may help with that goal are provided below too:
+The idea of the "boilerplate" files here is to provide things that can be copy-pasted into a new project.
+A few notes that may help with new project setup are provided below too.
 
 ### setup checklist
 1. .gitignore, README.md, LICENSE (use github for these usually)
