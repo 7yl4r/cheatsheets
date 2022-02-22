@@ -43,6 +43,9 @@ Options for directory merging: `rsync -habviuzP $OLDLOC/ $NEWLOC`. This keeps th
 ```
 # install ssh key on remote
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@server1.marine.usf.edu
+
+# generate new ssh id for your local user account
+ssh-keygen -t ed25519 -C "email@tylar.info"
 ```
 
 ## networking
