@@ -12,3 +12,8 @@
 1. git clone
 2. set up virtualenv  # NOTE: maybe use [pipenv](https://docs.pipenv.org/) instead of 2 & 3
 3. pip install -e .
+
+### pyenv
+```
+
+```
