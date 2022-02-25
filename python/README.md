@@ -146,7 +146,11 @@ with open('data.txt') as json_file:
     data = json.load(json_file)
 ```
 
+## reference materials
+* [google naming guidelines based on Guido's recommendations](https://google.github.io/styleguide/pyguide.html#3164-guidelines-derived-from-guidos-recommendations)
+
 ## reading
 longer-form reading material:
 
 * [book of python anti-patterns](http://docs.quantifiedcode.com/python-anti-patterns/)
+* [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/)
