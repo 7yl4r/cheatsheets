@@ -13,15 +13,18 @@ A few notes that may help with new project setup are provided below too.
 ### generic project structure:
 ```
 projectname/ # project root
-    conf/         # config files, could also be put in projectname/projectname/
-    lib/          # libraries, optional if you use a package manager like pip
-    projectname/  # src
+    conf/          # config files, could also be put in projectname/projectname/
+    documentation/ # human-readable documents
+    lib/           # libraries, optional if you use a package manager like pip
+    notebooks/     # ipynb (or other) code notebooks for human use
+    projectname/   # src
         __init__.py
         projectname.py  # py interface for projname?
         my_core_file_name.py
         submodule/
             __init__.py
             my_submodule_name.py
+    scripts/       # for CLI-executable scripts
     setup.py              
     README.md
     LICENSE
