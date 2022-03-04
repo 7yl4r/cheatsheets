@@ -13,7 +13,9 @@
 2. set up virtualenv  # NOTE: maybe use [pipenv](https://docs.pipenv.org/) instead of 2 & 3
 3. pip install -e .
 
-### pyenv
+### pyenv + pipenv
 ```
+# install python + pip + pyenv + pipenv
+python3 -m pipenv install  # install requirments from `Pipfile`
 
 ```
