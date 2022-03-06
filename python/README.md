@@ -65,8 +65,8 @@ grouping_option ::=  "_" | ","
 precision       ::=  digit+
 type            ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" | "o" | "s" | "x" | "X" | "%"
 """
-'{:05.2f}'.format(3.1415)  # 03.14
-'{:+1.0E}'.format(3.1415)  # +3E+00
+f'{PI:05.2f}'  # 03.14
+f'{PI:+1.0E}'  # +3E+00
 # more examples @ pyformat.info
 
 
