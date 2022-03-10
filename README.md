@@ -37,7 +37,14 @@ Basic usage is usually `-azvh`:
     -h --human_readable
 ```
 
-Options for directory merging: `rsync -habviuzP $OLDLOC/ $NEWLOC`. This keeps the most-recently modified version of the file.
+Examples
+```bash
+# For directory merging. Keeps most-recently modified version of files. 
+rsync -habviuzP $OLDLOC/ $NEWLOC`  
+
+# Sending to a remote server (eg USF supercomputer CIRCE)
+rsync -azvh *-M1BS-* tylarmurray@circe.rc.usf.edu:/work/t/tylarmurray/img/Jobos/
+```
 
 ## ssh
 ```
