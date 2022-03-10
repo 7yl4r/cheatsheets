@@ -1,0 +1,10 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+parse = "~=1.19.0"
+
+[dev-packages]
+pytest = "~=7.0.1"
