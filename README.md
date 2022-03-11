@@ -48,11 +48,12 @@ rsync -azvh *-M1BS-* tylarmurray@circe.rc.usf.edu:/work/t/tylarmurray/img/Jobos/
 
 ## ssh
 ```
-# install ssh key on remote
+# generate new ssh id for your local user account
+ssh-keygen -t ed25519 -C "email@tylar.info"  # NOTE: use default names & no pw otherwise you may need to configure w/ ssh-agent
+
+# install ssh key on a remote server
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@server1.marine.usf.edu
 
-# generate new ssh id for your local user account
-ssh-keygen -t ed25519 -C "email@tylar.info"
 ```
 
 ## networking
