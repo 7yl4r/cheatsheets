@@ -1,3 +1,12 @@
+# alternatives & symlinking bash completion stuff
+```
+# === install a symlink :
+update-alternatives --install link            name   path                              priority
+# examples:
+update-alternatives --install /usr/bin/java   java   /usr/lib/jvm/jdk1.8.0.05/bin/java 10
+update-alternatives --install /usr/bin/puppet puppet /opt/puppetlabs/bin/puppet        10
+```
+
 # debian packages
 ```
 # list stuff
