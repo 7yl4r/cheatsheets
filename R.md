@@ -19,7 +19,19 @@ glue("{var1}_{var2}.rds")  # foo_bar.rds
 gsub("\ ", "_", "hello world ")  # hello_world_
 ```
 
-# Install dependencies from DESCRIPTION file:
+# project setup
+```R
+# list dependencies
+installed.packages() 
+```
+## install from github
+```R
+# install devtools, then use it
+install.packages("devtools")
+devtools::install_github('marinebon/obisindicators')
+```
+
+## Install dependencies from DESCRIPTION file:
 
 ```bash
 # manual install devtools
