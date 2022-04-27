@@ -22,7 +22,11 @@ gsub("\ ", "_", "hello world ")  # hello_world_
 # project setup
 ```R
 # list dependencies
-installed.packages() 
+installed.packages()
+
+# add a dependency to DESCRIPTION
+usethis::use_package("dggridR")
+
 ```
 ## install from github
 ```R
@@ -38,6 +42,7 @@ devtools::install_github('marinebon/obisindicators')
 Rscript -e 'if (!requireNamespace("devtools")) install.packages("devtools")'
 # devtools on DESCRIPTION
 Rscript -e 'devtools::install(pkg=".", quick=TRUE, quiet=TRUE, upgrade=TRUE)'
+devtools::install_local()  # <- alternative
 ```
 
 # File i/o
@@ -61,4 +66,11 @@ sudo add-apt-repository ppa:marutter/rdev
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install r-base
+```
+
+# Install latest RStudio (ubuntu)
+```
+sudo apt install libnss3
+tylar@LAPTOP-ESK3B866:~/obisindicators$ wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.1-461-amd64.deb
+tylar@LAPTOP-ESK3B866:~/obisindicators$ sudo apt install ./rstudio-2022.02.1-461-amd64.deb
 ```
