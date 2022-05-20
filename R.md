@@ -25,8 +25,8 @@ gsub("\ ", "_", "hello world ")  # hello_world_
 installed.packages()
 
 # add a dependency to DESCRIPTION
-usethis::use_package("dggridR")
-
+usethis::use_package("dggridR")  # from CRAN
+usethis::use_dev_package("robis", remote="iobis/robis")  # from github
 ```
 ## install from github
 ```R
