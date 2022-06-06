@@ -36,7 +36,6 @@ devtools::install_github('marinebon/obisindicators')
 ```
 
 ## Install dependencies from DESCRIPTION file:
-
 ```bash
 # manual install devtools
 Rscript -e 'if (!requireNamespace("devtools")) install.packages("devtools")'
@@ -44,6 +43,13 @@ Rscript -e 'if (!requireNamespace("devtools")) install.packages("devtools")'
 Rscript -e 'devtools::install(pkg=".", quick=TRUE, quiet=TRUE, upgrade=TRUE)'
 devtools::install_local()  # <- alternative
 ```
+
+## editing DESCRIPTION file
+"author" types (full list [here](https://www.loc.gov/marc/relators/relaterm.html)):
+* cre: the creator or maintainer - the current maintainer, even if they are not the initial creator of the package.
+* aut: authors, those who have made significant contributions to the package.
+* ctb: contributors, those who have made smaller contributions, like patches.
+* fnd: funder, the people or organizations that have provided financial support for the development of the package.
 
 # File i/o
 ## excel
