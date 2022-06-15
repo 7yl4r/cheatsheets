@@ -1,17 +1,21 @@
-# recommended python package tooling (Pipfile + pipenv)
-## Setting up a new package
+# recommended toolings 
+## conda + environment.yml
+```bash
+# create environment (named `env`) from `environment.yml` file
+conda env create -f environment.yml
+```
+## (Pipfile + pipenv)
+### Setting up a new package
 1. add a Pipfile to your project (example [here](https://github.com/7yl4r/cheatsheets/blob/master/python/Pipfile))
 2. include all dependencies in the Pipfile
 
-## Installing a package from github w/ Pipfile
-### pyenv + pipenv
-```
+### Installing a package from github w/ Pipfile
+```bash
 # 1. install python + pip + pipenv
 # 2. git clone the project, cd there, then do:
 python -m pipenv install  # to install requirments from `Pipfile`
 ```
 
-# other toolings 
 ## package installation (virtualenv + git)
 1. git clone
 2. set up virtualenv
