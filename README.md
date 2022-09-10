@@ -37,6 +37,12 @@ Basic usage is usually `-azvh`:
     -h --human_readable
 ```
 
+## grep
+search without `-v` and use regex `-E`:
+```
+grep -Ev "word1|word2" example.txt
+```
+
 Examples
 ```bash
 # For directory merging. Keeps most-recently modified version of files. 
