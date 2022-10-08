@@ -130,12 +130,12 @@ with open(filepath, "r") as f_obj:
 # === write raw text (append)
 with open('action.csv', 'a') as f_obj:
     print('helloWorld', file=f_obj)
-        
+
 # TODO: add seek example(s)
 
 # === temporary (tmp) files
 import tempfile
-print tempfile.gettempdir() # prints the current temporary directory
+print tempfile.gettempdir()  # prints the current temporary directory
 
 with tempfile.TemporaryFile() as tmpfile:
     tmpfile.write('something on temporaryfile')
@@ -144,6 +144,12 @@ with tempfile.TemporaryFile() as tmpfile:
 import json
 with open('data.txt') as json_file:
     data = json.load(json_file)
+    
+# === write pickle data to file
+import pickle
+data = {"a":1}
+with open( "f.pickle", "wb") as fhandle:
+    pickle.dump(data, fhandle)
 ```
 
 ## reference materials
