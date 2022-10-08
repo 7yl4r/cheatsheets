@@ -6,6 +6,9 @@
 ```
 # pipe stderr & stdin to file
 echo texthere &> myfile.txt
+
+# tee to print and save log to file
+cmd | tee filename.log
 ```
 ## archives
 ### common `.tar.gz` tarball
