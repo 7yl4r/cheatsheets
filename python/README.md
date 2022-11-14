@@ -69,6 +69,13 @@ f'{PI:05.2f}'  # 03.14
 f'{PI:+1.0E}'  # +3E+00
 # more examples @ pyformat.info
 
+# === multiline strings de-indented 
+import inspect
+inspect.cleandoc("""
+        line one
+        line two
+        line three
+""")
 
 # === ISO8601 strftime strings 
 # (b/c wtf datetime.isoformat()?)
