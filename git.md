@@ -1,15 +1,12 @@
 ## Log Graph Visual
 ```
-# remember: git log "A DOG"
+# git "network" view (remember `git log "A DOG"`)
 git log --all --decorate --oneline --graph
 ```
 
 ## Submodules 
 
 ```bash
-# git "network" view (remember `git log "A DOG"`)
-git log --all --decorate --oneline --graph
-
 # initialize (if needed) & update all submodules
 git submodule update --init --recursive --remote
 
