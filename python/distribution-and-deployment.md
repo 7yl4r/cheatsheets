@@ -1,10 +1,23 @@
 # recommended toolings 
-## conda + environment.yml
+## 1) pyenv + poetry + pyproject.toml  [[ref]](https://www.adaltas.com/en/2021/06/09/pyrepo-project-initialization/)
+* install pyenv [[ref]](https://github.com/pyenv/pyenv#automatic-installer)
+* install poetry
+* to set up a project: 
+    * manage pyproject.toml using poetry
+* to work from existing pyproject.toml
+    * `poetry install`
+    * if errored about python version
+        * install python versions: `pyenv install {{py_version}}`
+        * activate the pyenv in this dir: `pyenv local {{py_version}}`
+        * run `poetry install` again
+    * if errored about packages modify pyproject.toml
+
+## 2) conda + environment.yml
 ```bash
 # create environment (named `env`) from `environment.yml` file
 conda env create -f environment.yml
 ```
-## (Pipfile + pipenv)
+## 3) (Pipfile + pipenv)
 ### Setting up a new package
 1. add a Pipfile to your project (example [here](https://github.com/7yl4r/cheatsheets/blob/master/python/Pipfile))
 2. include all dependencies in the Pipfile
