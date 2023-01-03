@@ -5,13 +5,15 @@ from argparse import ArgumentParser
 import logging
 import sys
 
-import projectname
+import packagename
+PACKAGE_NAME = "todo_set_this_to_your_packagename"
+COMMAND_NAME = "todo_set_this_to_your_commandname"
 
 def parse_args(argv):
-# =========================================================================
+    # =========================================================================
     # === set up arguments
     # =========================================================================
-    parser = ArgumentParser(description='short desc of projname goes here')
+    parser = ArgumentParser(description='todo_short_desc_of_projname_goes_here')
     
     # === arguments for the main command
     parser.add_argument("-v", "--verbose", help="increase output verbosity",
@@ -35,10 +37,12 @@ def parse_args(argv):
     subparsers = parser.add_subparsers(
         title='subcommands',
         description='usage: `projectname $subcommand` ',
-        help='addtnl help for subcommands: `projectname $subcommand -h`'
+        help=f'addtnl help for subcommands: `{{COMMAND_NAME}} $subcommand -h`'
     )
 
-    parser_status = subparsers.add_parser('my_subcommand', help='help str for my_subcommand')
+    parser_status = subparsers.add_parser(
+        'todo_my_subcommand', help='todo_help_str_for_my_subcommand'
+    )
     parser_status.set_defaults(func=my_subcommand_method)
 
     # add more here...
@@ -70,7 +74,7 @@ def parse_args(argv):
     stream_handler.addFilter(DuplicateLogFilter())
 
     file_handler = RotatingFileHandler(
-       '/var/opt/projectname/projectname.log', maxBytes=1e6, backupCount=5
+       f'/var/opt/{{PACKAGE_NAME}}/{{COMMAND_NAME}}.log', maxBytes=1e6, backupCount=5
     )
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)
@@ -93,4 +97,6 @@ if __name__ == "__main__":
     args = parse_args(sys.argv[1:])
     args.func(args)
 else:
-    raise AssertionError("CLI must be called as __main__")
+    raise AssertionError(
+        f"{{PACKAGE_NAME}}.{{SCRIPT_NAME}} CLI should called as __main__ and should not be imported."
+    )
