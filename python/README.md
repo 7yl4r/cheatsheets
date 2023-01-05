@@ -122,6 +122,12 @@ general reference links
 * csv, tsv file handling via [pandas read_csv & write_csv](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html)
 * excel files via [pandas `read_excel`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)
 ```python
+# === for every matching file in a directory
+import glob
+for filename in glob.iglob(directory_path):
+    print(filename)
+
+
 # === file paths, extensions, basenames, dirs
 import os.path
 abs_path = os.path.abspath("./file.txt")  # /abs/path/file.txt
@@ -134,6 +140,7 @@ dirpath, fname = os.path.split("./dir/subdir/file.txt")  # ./dir/subdir/, file.t
 with open(filepath, "r") as f_obj:
     for line in f_obj:
         print(line)
+        
 # === write raw text (append)
 with open('action.csv', 'a') as f_obj:
     print('helloWorld', file=f_obj)
