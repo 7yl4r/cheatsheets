@@ -38,7 +38,7 @@ def parse_args(argv):
     subparsers = parser.add_subparsers(
         title='subcommands',
         description='usage: `projectname $subcommand` ',
-        help=f'addtnl help for subcommands: `{{COMMAND_NAME}} $subcommand -h`'
+        help=f'addtnl help for subcommands: `{COMMAND_NAME} $subcommand -h`'
     )
 
     parser_status = subparsers.add_parser(
@@ -76,7 +76,7 @@ def parse_args(argv):
     stream_handler.addFilter(DuplicateLogFilter())
 
     file_handler = RotatingFileHandler(
-       f'/var/opt/{{PACKAGE_NAME}}/{{COMMAND_NAME}}.log', maxBytes=1e6, backupCount=5
+       f'/var/opt/{PACKAGE_NAME}/{COMMAND_NAME}.log', maxBytes=1e6, backupCount=5
     )
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)
@@ -100,5 +100,5 @@ if __name__ == "__main__":
     args.func(args)
 else:
     raise AssertionError(
-        f"{{PACKAGE_NAME}}.{{SCRIPT_NAME}} CLI should called as __main__ and should not be imported."
+        f"{PACKAGE_NAME}.{SCRIPT_NAME} CLI should called as __main__ and should not be imported."
     )
