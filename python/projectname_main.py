@@ -3,6 +3,7 @@
 """ example main file with cmd line interface """
 from argparse import ArgumentParser
 import logging
+from logging.handlers import RotatingFileHandler
 import sys
 
 import packagename
