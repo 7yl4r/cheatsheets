@@ -54,11 +54,12 @@ def parse_args(argv):
     # === set up logging behavior
     # =========================================================================
     if (args.verbose == 0):
-        logging.basicConfig(level=logging.WARNING)
+        stream_log_level = logging.WARNING
     elif (args.verbose == 1):
-        logging.basicConfig(level=logging.INFO)
+        stream_log_level = logging.INFO
     else: #} (args.verbose == 2){
-        logging.basicConfig(level=logging.DEBUG)
+        stream_log_level = logging.DEBUG
+    logging.basicConfig(level=stream_log_level)
 
     # === (optional) create custom logging format(s)
     # https://docs.python.org/3/library/logging.html#logrecord-attributes
@@ -69,7 +70,7 @@ def parse_args(argv):
     # === (optional) create handlers
     # https://docs.python.org/3/howto/logging.html#useful-handlers
     stream_handler = logging.StreamHandler()
-    stream_handler.setLevel(_level)
+    stream_handler.setLevel(stream_log_level)
     stream_handler.setFormatter(formatter)
     stream_handler.addFilter(DuplicateLogFilter())
 
