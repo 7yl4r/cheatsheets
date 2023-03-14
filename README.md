@@ -2,10 +2,13 @@
 * [data viz catalogue](https://datavizcatalogue.com/)
 
 # *nix
-## piping
+## piping & redirection
 ```
 # pipe stderr & stdin to file
 echo texthere &> myfile.txt
+
+# redirect STDERR (2) to STDOUT (1) from docker logs, pipe to grep regex
+docker logs erddap 2>&1 | grep -E "WARN|ERR"
 
 # tee to print and save log to file
 cmd | tee filename.log
