@@ -1,3 +1,11 @@
+## rebase-based multibranch workflow
+When maintaining multiple branches rebasing off of the master [eg](https://github.com/USF-IMARS/erddap-config), it is sometimes useful to create a backup branch
+```bash
+# del extant *-backup branch & update origin w/ latest 
+BRANCH=dune
+git checkout $BRANCH && git branch -D $BRANCH-backup && git branch $BRANCH-backup && git checkout $BRANCH-backup && git push -f origin $BRANCH-backup && git checkout $BRANCH && git branch -D $BRANCH-backup
+```
+
 ## Log Graph Visual
 ```
 # git "network" view (remember `git log "A DOG"`)
