@@ -11,7 +11,7 @@ docker ps -a --filter volume=VOLUME_NAME_OR_MOUNT_POINT
 ```
 # === Hard down
 # stop & delete containers, del volumes (database data), del download images
-docker-compose down --volumes --rmi all
+docker-compose down --volumes --rmi all && docker-compose up -d
 ```
 
 The "hard down" command above should also do it for but for a more detailed way of clearin everything on the hypervisor use the instructions in the [this gist](https://gist.github.com/beeman/aca41f3ebd2bf5efbd9d7fef09eac54d).
