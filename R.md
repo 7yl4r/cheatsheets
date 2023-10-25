@@ -19,6 +19,23 @@ glue("{var1}_{var2}.rds")  # foo_bar.rds
 gsub("\ ", "_", "hello world ")  # hello_world_
 ```
 
+# logging
+```R
+library(logger)
+
+# set log threshold
+log_threshold(TRACE) 
+
+# log functions:
+log_trace("TRACE")
+log_debug("DEBUG")
+log_info("INFO")
+log_success("SUCCESS")
+log_warn("WARN")
+log_error("ERROR")
+log_fatal("FATAL")
+```
+
 # project setup
 ```R
 # list dependencies
