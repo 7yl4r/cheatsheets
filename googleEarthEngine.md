@@ -9,6 +9,13 @@ exports.my_function_name = function(){
 }
 ```
 
+## Filepath of a named module
+Example:
+code                                      | URL
+------------------------------------------|------------------------------------------------------------------------------------
+require("users/tylarmurray/sat_fns:wv_2") | https://code.earthengine.google.com/?scriptPath=users%2Ftylarmurray%2Fsat_fns%3Awv_2
+```
+
 # imageCollection upload
 0. create bucket in google cloud. suggested settings:
     * standard or nearline
