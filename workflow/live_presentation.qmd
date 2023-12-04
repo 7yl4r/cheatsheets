@@ -1,0 +1,57 @@
+Sets up a Quarto+reveal.js powered website on github.
+
+# create github website
+1. click through the GUI on github
+
+# create the project files locally
+```bash
+quarto create project website PRESENTATION_NAME
+
+
+```
+
+
+## .qmd document boilerplate
+```qmd
+---
+title: "TITLE"
+author: "Tylar Murray"
+format: revealjs
+  theme: TODO: pick one of:
+    beige
+    blood
+    dark
+    default
+    league
+    moon
+    night
+    serif
+    simple
+    sky
+    solarized
+  logo: logo.png
+  footer: "Footer text"
+
+---
+
+# SLIDE_SECTION_TITLE_1
+
+## SLIDE_TITLE
+
+- slide_content_1
+- slide_content_2 ^[A footnote]
+
+3`{python}
+#| code-line-numbers: "2-4"
+#| echo: true
+#| output-location: slide OR column
+
+CODE_GOES_HERE
+3`
+
+::: {.notes}
+Speaker_notes_here.
+:::
+```
+
+* [formatting ref](https://quarto.org/docs/presentations/revealjs/)
