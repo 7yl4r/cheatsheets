@@ -13,6 +13,9 @@ createPresentation["quarto+revealJS \n setup"]
 init -->
 projectType -- "live presentation" --> createPresentation
 
+%% === external links =======================================================
+click createPresentation "https://github.com/7yl4r/cheatsheets/blob/master/workflow/live_presentation.qmd"
+
 %% === legend ===============================================================
 subgraph Legend
     example{"human \n choice"} -- "selected choice option" --> B["checklist"]
