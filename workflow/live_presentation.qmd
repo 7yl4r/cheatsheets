@@ -6,12 +6,13 @@ Sets up a Quarto+reveal.js powered website on github.
 # create the project files locally
 ```bash
 quarto create project website PRESENTATION_NAME
-
-
 ```
 
+TODO: add a `.gitignore` & init commit
 
 ## .qmd document boilerplate
+Put this into the `index.qmd` document or create other `.qmd` documents.
+
 ```qmd
 ---
 title: "TITLE"
@@ -55,3 +56,9 @@ Speaker_notes_here.
 ```
 
 * [formatting ref](https://quarto.org/docs/presentations/revealjs/)
+
+Edit the `.qmd` content, click "render".
+
+Git add, commit, push.
+
+Website will be in `/_site/`
