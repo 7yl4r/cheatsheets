@@ -61,4 +61,6 @@ Edit the `.qmd` content, click "render".
 
 Git add, commit, push.
 
+TODO: set up GH action [ref](https://quarto.org/docs/publishing/github-pages.html).
+
 Website will be in `/_site/`
