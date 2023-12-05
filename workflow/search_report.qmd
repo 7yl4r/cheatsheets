@@ -1,0 +1,11 @@
+Workflow for producing a report when searching for something.
+A search could be a literature review, a product search, or similar.
+
+The primary output is a spreadsheet of search results and columns relevant to the context of the requested search.
+
+Create spreadsheet.
+Do a search (using google, or whatever).
+Record each finding as a row.
+Add columns as they seem relevant.
+
+Once happy with this spreadsheet, additional analysis can be done on the data collected to produce a more detailed report.
