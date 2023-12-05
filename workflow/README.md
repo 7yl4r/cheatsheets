@@ -24,3 +24,9 @@ subgraph Legend
     example{"human \n choice"} -- "selected choice option" --> B["checklist"]
 end
 ```
+
+
+reference materials
+* quarto inspirations:
+  * https://github.com/marinebon/MarineSDMs/tree/main
+  * https://github.com/tbep-tech/shiny-workshop/tree/main
