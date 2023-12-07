@@ -6,9 +6,21 @@ Sets up a Quarto+reveal.js powered website on github.
 # create the project files locally
 ```bash
 quarto create project website PRESENTATION_NAME
+
+cd PRESENTATION_NAME
+
+# set up github pages publishing
+git checkout --orphan gh-pages
+git reset --hard # make sure all changes are committed before running this!
+git commit --allow-empty -m "Initialising gh-pages branch"
+git push origin gh-pages
 ```
 
 TODO: add a `.gitignore` & init commit
+```.gitignore
+/.quarto/
+/_site/
+```
 
 ## .qmd document boilerplate
 Put this into the `index.qmd` document or create other `.qmd` documents.
@@ -60,6 +72,12 @@ Speaker_notes_here.
 Edit the `.qmd` content, click "render".
 
 Git add, commit, push.
+
+# Troubleshooting
+## test gh-pages publish
+```bash
+quarto publish gh-pages
+```
 
 TODO: set up GH action [ref](https://quarto.org/docs/publishing/github-pages.html).
 
