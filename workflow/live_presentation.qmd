@@ -76,6 +76,7 @@ Git add, commit, push.
 # Troubleshooting
 ## test gh-pages publish
 ```bash
+source ~/.Renviron  # this is (sometimes) needed for when using system-specific configs (like rgee)
 quarto publish gh-pages
 ```
 
