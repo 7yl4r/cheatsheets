@@ -1,6 +1,13 @@
-```typescript
+```javascript
+// function with kwargs & defaults
+var myfun = function(d){
+  var zoomScale = d.zoom_scale || 9 ; 
+}
 
-# template strings
+```
+
+```typescript
+// template strings
 const lyrics = "howdy, howdy, howdy"
 `<div>${lyrics}</div>`
 ```
