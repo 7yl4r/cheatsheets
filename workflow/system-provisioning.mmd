@@ -1,0 +1,19 @@
+---
+title: system provisioning 
+---
+graph TD
+
+quartoDoc("Hand-crafted Quarto document")
+lint{{"auto-formatting linter"}}
+render{{"quarto render"}}
+ipfsRender("Rendered html IPFS content hash")
+ipfsCode("Quarto code IPFS content hash")
+
+%% ======
+quartoDoc --> lint
+lint --> ipfsCode
+ipfsCode -->  render --> ipfsRender
+%% === external links =======================================================
+%% click createPresentation "https://github.com/7yl4r/cheatsheets/blob/master/workflow/live_presentation.qmd"
+%% click createSpreadsheet "https://github.com/7yl4r/cheatsheets/blob/master/workflow/search_report.qmd"
+
