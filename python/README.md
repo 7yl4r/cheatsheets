@@ -1,4 +1,9 @@
+Project setup template:
+* `cookiecutter https://github.com/waynerv/cookiecutter-pypackage.git`
+* docstring formatting "numpy"
+
 ## docstring formatting ref
+My preferred docstring formatting is numpy-like:
 ```python
 """Summary line.
 Extended description of function.
