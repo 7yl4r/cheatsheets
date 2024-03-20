@@ -1,0 +1,31 @@
+---
+title: "EXAMPLE"
+author: "Tylar Murray"
+---
+
+```{R} 
+#| label: import libraries & functions
+#| code-summary: (code) import libraries & functions
+#| message: false
+#| warning: false
+if (!requireNamespace("librarian", quietly = TRUE)) {
+  # If not installed, install the package
+  install.packages("librarian")
+}
+
+librarian::shelf(
+#  readr,
+#  skimr,
+  glue,
+#  ggplot2,
+#  quarto
+)
+# source("R/getData.R")
+```
+
+```{R}
+#| label: skim data
+#| code-summary: (code) skim the data
+#| message: false
+print('test')
+```
