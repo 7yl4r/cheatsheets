@@ -1,6 +1,11 @@
 ---
 title: "EXAMPLE"
 author: "Tylar Murray"
+format: html
+code-fold: true
+editor: source
+params: 
+  fpath: file.csv
 ---
 
 ```{R} 
