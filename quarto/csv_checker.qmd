@@ -1,0 +1,60 @@
+---
+title: "Tylar's CSV checker"
+author: "Tylar Murray"
+format: html
+code-fold: true
+editor: source
+params: 
+  fpath: ./DC_Macrocrustaceos_Atlantico_Mexicano_20240502.csv
+---
+
+```{R}
+#| code-summary: setup
+library(ggplot2)
+library(skimr)
+```
+
+```{R}
+#| code-summary: load file
+data <- read.csv(params$fpath)
+```
+
+```{R}
+#| code-summary: Print basic diagnostic information
+# print(head(data))     # View first few rows
+# print(str(data))      # Structure of the data frame
+# print(summary(data))  # Statistical summary of the data
+#  Use skimr to provide a detailed summary
+skimmed_data <- skimr::skim(data)
+print(skimmed_data)
+
+skimr::skim_tee(data)
+
+```
+# column-specific checks:
+```{R}
+#| code-summary: diagnose char column that should be numeric
+colname <- "decimalLatitude"
+# Convert row to numeric. Non-convertible entries will become NA
+numeric_colname <- paste(colname, "_as_numeric", sep = "")
+data[[numeric_colname]] <- as.numeric(as.character(data[[colname]]))
+
+# Check for NAs which indicate problematic entries
+num_non_numeric <- sum(is.na(data[[numeric_colname]]))
+
+# Print the number of non-numeric rows
+print(paste("Number of non-numeric rows in 'NumericColumn':", num_non_numeric))
+
+# Optional: To see which rows are non-numeric
+problematic_rows <- data[is.na(data[[numeric_colname]]), ]
+print(problematic_rows)
+```
+
+```{R}
+#| code-summary: Histogram of a numeric column
+hist(data$decimalLatitude)
+```
+```{R}
+#| code-summary: Scatter plot between two variables
+plot(data$Variable1, data$Variable2, main = "Scatter plot", xlab = "Variable 1", ylab = "Variable 2")
+```
