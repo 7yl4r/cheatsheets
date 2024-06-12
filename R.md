@@ -1,3 +1,16 @@
+## librarian
+```
+# Install librarian package if you haven't already
+if (!requireNamespace("librarian", quietly = TRUE)) {
+  install.packages("librarian")
+}
+library(librarian)
+shelf(
+  dplyr,
+  here,
+  leaflet
+)
+```
 ```R
 # function def
 my_fn = function(
