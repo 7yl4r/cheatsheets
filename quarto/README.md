@@ -1,6 +1,23 @@
+## preferred .qmd header
+```
+----
+code-fold: true
+----
+```
+
+## Chunk metadata reference
+Common metadata lines for chunks:
+```R
+#| label: myLabel
+#| code-summary: sameAsMyLabel
+#| message: false
+#| warning: false
+#| eval: true
+```
+
 # setup
 ## RStudio new quarto website
-```
+```bash
 mkdir newRepo
 cd newRepo
 quarto create-project --type website
@@ -11,7 +28,7 @@ quarto publish
 ```
 
 ##  add .gitignore
-```
+```gitignore
 *csv
 
 .Rproj.user
@@ -26,4 +43,5 @@ quarto publish
 *_files/
 _site/*
 ```
-##
+
+
