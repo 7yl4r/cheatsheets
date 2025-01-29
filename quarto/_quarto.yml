@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "my lil project"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+        
+      - text: Downstream Flows
+        menu:
+        - riverflows/riverflowSouth.qmd
+        - riverflows/riverflowEast.qmd
+        - riverflows/riverflowWest.qmd
+        - riverflows/riverflowSoutheast.qmd
+        - riverflows/riverflowSouthwest.qmd
+        
+      - href: https://github.com/marinebon/data_reports
+        text: Source Code on GitHub
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-fold: true
+    message: false
+    warning: false
+
