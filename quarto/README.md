@@ -46,7 +46,6 @@ _site/*
 
 ## modify _quarto.yml
 Ensure the following is at the bottom of the file to apply my favorite settings:
-
 ```
 format:
   html:
@@ -58,3 +57,8 @@ format:
     warning: false
 ```
 
+Add source code link to website.navbar.left:
+```
+      - href: https://github.com/marinebon/data_reports
+        text: Source Code on GitHub
+```
