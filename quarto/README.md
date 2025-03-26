@@ -44,4 +44,17 @@ quarto publish
 _site/*
 ```
 
+## modify _quarto.yml
+Ensure the following is at the bottom of the file to apply my favorite settings:
+
+```
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-fold: true
+    message: false
+    warning: false
+```
 
