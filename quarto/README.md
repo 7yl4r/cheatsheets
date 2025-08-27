@@ -5,8 +5,8 @@ code-fold: true
 ----
 ```
 
-## Chunk metadata reference
-Common metadata lines for chunks:
+## Chunk Execution Options Reference
+Common [Execution Option](https://quarto.org/docs/computations/execution-options.html) lines for chunks:
 ```R
 #| label: myLabel
 #| code-summary: sameAsMyLabel
