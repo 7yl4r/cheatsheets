@@ -1,3 +1,9 @@
+## debug with `browser()`
+```
+# this code will pause execution and let you interact with the environment in RStudio
+browser()
+```
+
 ## librarian
 ```
 # Install librarian package if you haven't already
